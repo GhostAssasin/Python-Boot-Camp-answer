@@ -66,7 +66,7 @@ class Note(object):
     def writeToFile(self):
         toJson={ "author_name": self.author_name ,"note": self.note ,"rating": self.rating}
         with open('microlibnotes.json', 'w') as file: 
-            json.dump(toJson,file)
+            json.dump(toJson, file, sort_keys=True, indent=2)
 
 
     def FindAvr(self):
